@@ -21,7 +21,6 @@ In Theory, the more points used, the more accurate your value will be, but as it
 def random_pi(points):
     in_circle = 0
     for i in numba.prange(points):
-
         if math.hypot(random.uniform(-1.0, 1.0), random.uniform(-1.0, 1.0)) <= 1:
             in_circle += 1
     pi = (4.0 * in_circle) / points
